@@ -23,7 +23,7 @@ namespace ProxyEngine.LDAP
 
             try
             {
-                #region CheckParameters
+                #region Check Parameters
                 if (string.IsNullOrEmpty(config.Url))
                     throw new Exception("InvalidLDAPUrlConfigParameter");
 

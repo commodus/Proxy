@@ -29,13 +29,13 @@ namespace ProxyEngine
             throw new ApplicationException("Proxy not found for :" + proxySettings.ConnectionType);
         }
 
-        public IProxy GetProxy(ConnectionType connectionType, ProxyRequest requestparameter)
+        public IProxy GetProxy(ConnectionType connectionType, ProxyRequest proxyRequest)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Kullanılabilir Proxy type'larının listesini verir
+        /// Kullanılabilir proxy type'larının listesini verir
         /// </summary>
         /// <returns></returns>
         public IEnumerable<IProxy> GetAllProxyProxies()
@@ -45,12 +45,10 @@ namespace ProxyEngine
 
         private ProxySettings GetProxySettings(int moduleId, ProxyRequest proxyRequest)
         {
-
             ProxySettings proxySettings;
             try
             {
-                // TODO : Get proxy settings from the database or other file 
-
+                // TODO : Get proxy settings from the database or other file with moduleId
                 proxySettings = new ProxySettings();
                 proxySettings.ConnectionType = ConnectionType.LDAP;
                 proxySettings.Url = "";

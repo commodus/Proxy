@@ -37,7 +37,6 @@ namespace ProxyBase
         protected T SendRequestAsync<T>(object request, Func<object, Task<T>> function)
         {
             // TODO : Log
-
             Stopwatch stopWatch = new Stopwatch();
             T response = default(T);
             Exception exception = null;
@@ -54,7 +53,6 @@ namespace ProxyBase
             stopWatch.Stop();
 
             // TODO : Log
-
             if (exception != null)
                 throw new Exception("Proxy error", exception);
 
@@ -64,7 +62,6 @@ namespace ProxyBase
         protected T SendRequest<T>(object request, Func<object, T> function)
         {
             // TODO : Log
-
             Stopwatch stopWatch = new Stopwatch();
             T response = default(T);
             Exception exception = null;
@@ -81,7 +78,6 @@ namespace ProxyBase
             stopWatch.Stop();
 
             // TODO : Log
-
             if (exception != null)
                 throw new Exception("Proxy error", exception);
 
@@ -106,7 +102,6 @@ namespace ProxyBase
             stopWatch.Stop();
 
             // TODO : Log
-
             if (exception != null)
                 throw new Exception("Proxy error", exception);
 

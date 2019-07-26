@@ -84,6 +84,7 @@ namespace ProxyEngine.LDAP
                 response.ResponseCode = "LDAPLoginFailed";
                 response.Message = ex.Message;
             }
+
             return response;
         }
     }

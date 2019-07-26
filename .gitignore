@@ -3,3 +3,14 @@
 ################################################################################
 
 /ProxyEngine/bin/Debug/netstandard2.0
+/ProxyEngine/obj
+/ProxyBase/obj
+/ProxyBase/bin/Debug/netstandard2.0
+/.vs/Proxy/v15
+/ProxyEngine.Contract/bin/Debug/netstandard2.0
+/ProxyEngine.Contract/obj
+/ProxyEngine.LDAP/bin/Debug/netstandard2.0
+/ProxyEngine.LDAP/obj
+/ProxyTest/bin/Debug/netcoreapp2.2
+/ProxyTest/obj/Debug/netcoreapp2.2
+/ProxyTest/obj
