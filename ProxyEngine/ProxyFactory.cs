@@ -8,17 +8,17 @@ namespace ProxyEngine
 {
     public class ProxyFactory : IProxyFactory
     {
-        private IEnumerable<IProxy> _proxy;
+        private IEnumerable<IProxy> _proxies;
     
-        public ProxyFactory(IEnumerable<IProxy> proxy)
+        public ProxyFactory(IEnumerable<IProxy> proxies)
         {
-            this._proxy = proxy;
+            this._proxies = proxies;
         }
 
         public virtual IProxy GetProxy(int moduleId, ProxyRequest proxyRequest)
         {
             var proxySettings = GetProxySettings(moduleId, proxyRequest);
-            var proxy = this._proxy.ToList().FirstOrDefault(p => p.ConnectionType == proxySettings.ConnectionType);
+            var proxy = this._proxies.ToList().FirstOrDefault(p => p.ConnectionType == proxySettings.ConnectionType);
 
             if (proxy != null)
             {
@@ -38,9 +38,9 @@ namespace ProxyEngine
         /// Kullanılabilir proxy type'larının listesini verir
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<IProxy> GetAllProxyProxies()
+        public IEnumerable<IProxy> GetAllProxies()
         {
-            return _proxy;
+            return _proxies;
         }
 
         private ProxySettings GetProxySettings(int moduleId, ProxyRequest proxyRequest)

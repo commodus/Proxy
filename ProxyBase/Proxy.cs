@@ -27,7 +27,7 @@ namespace ProxyBase
 
         #region IProxy
 
-        public virtual ProxyAuthenticateResponse Authenticate(ProxyAuthenticateRequest request)
+        public virtual ProxyAuthenticateResponse Authenticate(ProxyAuthenticateRequest proxyAuthenticateRequest)
         {
             throw new NotImplementedException();
         }

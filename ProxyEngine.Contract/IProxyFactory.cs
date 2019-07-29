@@ -12,6 +12,6 @@ namespace ProxyEngine.Contract
         /// Kullanılabilir proxy type'larının listesini verir
         /// </summary>
         /// <returns></returns>
-        IEnumerable<IProxy> GetAllProxyProxies();
+        IEnumerable<IProxy> GetAllProxies();
     }
 }
